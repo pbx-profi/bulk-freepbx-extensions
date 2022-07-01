@@ -6,7 +6,7 @@
 
 $first = "101";
 $last = "110";
-$tech = "pjsip"
+$tech = "pjsip";
 $password = "REGEN";
 
 echo 'extension,name,description,tech,secret,callwaiting_enable,findmefollow_enabled,findmefollow_grplist,voicemail'."\n";
