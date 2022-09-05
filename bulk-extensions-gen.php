@@ -10,13 +10,28 @@ $password = "REGEN";
 minput:
 echo "Введите первый номер из диапазона:";
 $first = rtrim(fgets(STDIN));
+    if (!ctype_digit($first)) {
+        echo "Может содержать только числа!\n";
+        sleep(3);
+        system('clear');
+        goto minput;
+}
 
+maxput:
 echo "Введите последний номер из диапазона:";
 $last = rtrim(fgets(STDIN));
 
+    if (!ctype_digit($last)) {
+        echo "Может содержать только числа!\n";
+        sleep(3);
+        system('clear');
+        goto maxput;
+    }
+
 if($last < $first)
 {
-        echo "Недопустимый диапазон. Последний номер не может быть больше первого!\n";
+        echo "Недопустимый диапазон. Последнее значение не может быть ниже начального!\n";
+        sleep(3);
         system('clear');
         goto minput;
 }
